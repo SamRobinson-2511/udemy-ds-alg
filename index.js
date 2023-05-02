@@ -106,7 +106,7 @@ function printFirstItemThenFirstHalfThenSayHi100Times(items){
 
 // 3. Different Terms for Inputs = O(a + b)
 
-//41. O(n^2)
+//41. O(n^2) = quadratic time 
 //log all pairs of an array
 const boxes = ['a','b','c','d','e'];
 function logAllPairsOfArray(array){
@@ -117,6 +117,8 @@ function logAllPairsOfArray(array){
     }
 }
 logAllPairsOfArray(boxes);
+//any step in same indentation is additive 
+//any nested step is multiplied
 
 // 4. Drop non - dominants
 
