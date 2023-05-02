@@ -89,7 +89,35 @@ function findNemo(array){
 findNemo(everyone);
 // - 
 // 2. Remove Constants
-// 3. Different Terms for Inputs
+function printFirstItemThenFirstHalfThenSayHi100Times(items){
+    console.log(items);
+    let middleIndex = Math.floor(items.length/2);
+    let index = 0;
+
+    while (index < middleIndex){
+        console.log(items[index]);
+        index++;
+    }
+    for (let i = 0; i < 100; i++){
+        console.log('hi');
+    }
+}
+//this is all O(n)
+
+// 3. Different Terms for Inputs = O(a + b)
+
+//41. O(n^2)
+//log all pairs of an array
+const boxes = ['a','b','c','d','e'];
+function logAllPairsOfArray(array){
+    for (let i = 0; i < array.length; i++){
+        for (let j = 0; j <  array.length; j++){
+            console.log(array[i], array[j] );
+        }
+    }
+}
+logAllPairsOfArray(boxes);
+
 // 4. Drop non - dominants
 
 
