@@ -159,6 +159,26 @@ function arrayOfHiNTimes(n){
 
 arrayOfHiNTimes(6) //O(n) because we're creating a data structure 
 
+//49. Exercise: Twitter
+// find first, find nth tweet
+
+const array = ['hi', 'my', 'teddy'];
+console.log(array[0]); //O(1)
+console.log(array[array.length-1]); //O(1)
+
+const array2 = [{
+    tweet: 'hi', 
+    date: 2012
+    }, {
+    tweet: 'my', 
+    date: 2014
+    }, {
+    tweet: 'teddy', 
+    date: 2018
+}]; //O(n^2) time because they're nested loops
+
+console.log('heareawe;dlkajsdfasdf'.length) //simple property of object in JS, O(1)
+
 
 
 
