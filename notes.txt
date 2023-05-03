@@ -34,3 +34,25 @@ Causes of space complexity:
 2. Data structures
 3. Function calls
 4. Allocations
+
+
+1. Analytical Skills
+2. Coding Skills
+3. Technical Skills
+4. Communication Skills
+
+Data structures:
+- Arrays 
+- Stacks 
+- Queues
+- Linked Lists
+- Trees 
+- Tries 
+- Graphs 
+- Hash Tables 
+
+Algorithms: 
+- Sorting 
+- Dynamic Programming
+- BFS + DFS (Searching)
+- Recursion
