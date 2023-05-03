@@ -1,0 +1,5 @@
+Big O Cheatsheet:
+
+O(1): constant, no loops
+O(n): linear, for and while loops
+O(n^2): quadratic, every element in collection needs to be compared to every other element. two nested loops
