@@ -200,6 +200,31 @@ const findNemo3 = array => {
 findNemo2(["nemo"])
 
 
+//Google Interview
+//https://www.youtube.com/watch?v=XKu_SEDAykw
+
+//Give 2 arrays, create a function that lets a user know (bool) whether these arrays 
+//contain any common items
+
+const arr1 = [0,2,4,6];
+const arr2 = [0,2,5,7];
+
+function sameThing(array1, array2){
+    for (let i = 0; i < array1.length; i++){
+        for (let j = 0; j < array2.length; j++){
+            if(array1[i]===array2[j]){
+                console.log(true)
+            }
+        }
+    }
+    console.log(false);
+}
+
+sameThing(arr1, arr2) //O(a*b) because arrays can be differently sized, brute force
+
+
+
+
 
 
 
