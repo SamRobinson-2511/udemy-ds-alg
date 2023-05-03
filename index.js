@@ -180,5 +180,27 @@ const array2 = [{
 console.log('heareawe;dlkajsdfasdf'.length) //simple property of object in JS, O(1)
 
 
+//50. JavaScript loops
+const findNemo2 = array => {
+    array.forEach(fish => {
+        if(fish === 'nemo'){
+            console.log('Found Nemo!')
+        }
+    })
+}
+
+const findNemo3 = array => {
+    for(let fish of array){
+        if (fish === 'nemo'){
+            console.log('Found Nemo!')
+        }
+    }
+}
+
+findNemo2(["nemo"])
+
+
+
+
 
 
