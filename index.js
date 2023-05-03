@@ -139,3 +139,26 @@ function printAllNumbersThenAllPairSums(numbers){
 printAllNumbersThenAllPairSums([1,2,3,4,5]) //O(n^2)
 
 
+//48. Space complexity exercise
+
+function boooo(n){
+    for (let i = 0; i < n.length; i++){
+        console.log('booooo')
+    }
+}
+
+boooo([1,2,3,4,5])//space complexity of 0(1) because i is only declared variable
+
+function arrayOfHiNTimes(n){
+    let hiArray = [];
+    for (let i = 0; i < n; i++){
+        hiArray[i] = 'hi';
+    }
+    console.log(hiArray);
+}
+
+arrayOfHiNTimes(6) //O(n) because we're creating a data structure 
+
+
+
+
