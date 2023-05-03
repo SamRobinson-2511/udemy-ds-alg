@@ -51,8 +51,61 @@ Data structures:
 - Graphs 
 - Hash Tables 
 
-Algorithms: 
+Algorithms: steps or processes to manipulate collections of items
 - Sorting 
 - Dynamic Programming
 - BFS + DFS (Searching)
 - Recursion
+
+
+62. Data structure
+- collection of values 
+- each specialized for its own thing 
+- way to organize data 
+- blockchain 
+- arrays + objects
+- always trade-offs
+
+63. How computers store data: 
+- CPU
+- RAM: stores variables, volatile
+- Storage: video, music, documents, persistent, slow 
+
+RAM: 
+- addresses: each holds 8 bits (1 BYTE) 
+- BIT: tiny electrical switch
+- CPU asks RAM through memory controller explicitly 
+- can access bits at any random address in memory really quickly 
+- CPU cache: has tiny memory for recent items 
+
+Data Structures: way to store information 
+- Integers stored in 32 or 64 bits 
+- JS: integer overflow
+-- 64 bit float not Integers
+- arrangement of data in RAM
+
+
+JS DataTypes: 
+- arrays 
+- objects
+- can build our own data structures regardless of whether the language supports them 
+
+
+65. Operations on Data Structures:
+- each DS has its trade-offs
+- insertion
+- deletion
+- traversal: access each data item once 
+- searching 
+- sorting 
+- access 
+
+66. Arrays Introduction: 
+- lookup = O(1) - constant time
+- push = O(1) - constant time
+- insert = O(n) - linear time
+- delete = O(n) - constant time 
+
+- smallest footprint of any data structure 
+- 
+

@@ -271,6 +271,63 @@ function containsCommonItem2(array1, array2){
 }
 
 
+console.log(containsCommonItem2(arr1, arr3));
+
+////////////GOOGLE INTERVIEW
+//NAIVE
+function hasPairWithSum(arr, sum){
+    const length = arr.length;
+    for(let i = 0; i<length-1; i++){
+        for(let j = i+1; j<length; j++){
+            if(arr[i] + arr[j] === sum)
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(hasPairWithSum([0,2,5], 7))
+
+//BETTER
+function hasPairWithSum2(arr, sum){
+    const mySet = new Set();
+    const length = arr.length;
+    for (let i = 0; i < length; i++){
+        if (mySet.has(arr[i])){
+            return true;
+        }
+        mySet.add(sum - arr[i]);
+    }
+    return false;
+}
+console.log(hasPairWithSum2([0,2,5], 7));
+
+//DATA STUCTURES AND ALGORITHMS
+
+const strings = ['a', 'b', 'c', 'd'];
+// to store 4 items on a 32 bit system
+// 4 * 4 uses 16 bytes of storage
+//stored in sequential order in ram 
+console.log(strings[2])
+
+//push: add something to end of array 
+
+strings.push('e');
+console.log(strings);//O(1)
+//pop: removes 
+const x = strings.pop(); //O(1)
+console.log(x)
+
+//unshift: add to front of array
+strings.unshift('x');//O(n) to reassign indices 
+console.log(strings)
+
+//splice: insertion/deletion
+strings.splice(2, 0, 'alien');//O(n/2), simplified to O(n)
+console.log(strings)
+
+
+
 
 
 
