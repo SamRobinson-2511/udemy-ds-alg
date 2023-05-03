@@ -3,3 +3,34 @@ Big O Cheatsheet:
 O(1): constant, no loops
 O(n): linear, for and while loops
 O(n^2): quadratic, every element in collection needs to be compared to every other element. two nested loops
+O(n!): factorial, adds loop for every element 
+
+
+**Iterating through half a collection is still O(n)
+**Two separate collections: O(a * b)
+
+
+Causes of time: 
+1. Operations
+2. Comparisons
+3. Looping (for, while)
+4. Outside function call 
+
+Rules: 
+1. Always worst case
+2. Remove Constants
+3. Different inputs should have different variables:
+    +: for steps in order
+    *: for nested steps
+4. Drop non-dominant terms 
+
+Three pillars of code: 
+1. Readability 
+2. Speed: time complexity
+3. Memory: space complexity
+
+Causes of space complexity: 
+1. Adding variables 
+2. Data structures
+3. Function calls
+4. Allocations
