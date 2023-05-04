@@ -326,7 +326,53 @@ console.log(strings)
 strings.splice(2, 0, 'alien');//O(n/2), simplified to O(n)
 console.log(strings)
 
+//C++ 
+// int a[20];
+// int b[5] {1,2,3,4,5}
 
+//JS automatically allocates memory based on size of array 
+// don't need to think about memory management 
+//dynamic array expands as we add more elements, becomes O(n) when we append to an array 
+const strings2 = ['a', 'b', 'c', 'd'];
+
+
+//69.
+
+//reference type
+var object1 = {value:10};
+var object2 = object1;
+var object3 = {value:10};
+
+//context v. scope
+const object4 = {
+    a: function(){
+        console.log(this);
+    }
+}
+
+//instantiation: make a copy of object and reuse the code 
+// class Player {
+//     constructor(name, type){
+//         console.log(this);
+//         this.name = name;
+//         this.type = type;
+//     }
+//     introduce(){
+//         console.log(`Hi, I am ${this.name} and I'm a ${this.type}`)
+//     }
+// }
+
+// class Wizard extends Player {
+//     constructor(name, type){
+//         super(name, type)
+//     }
+//     play(){
+//         console.log(`Weeee, I'm a ${this.type}`)
+//     }
+// }
+
+// const wizard1 = new Wizard('Shelly', 'Healer')
+// const wizard2 = new Wizard('Shawn', 'Dark Magic')
 
 
 

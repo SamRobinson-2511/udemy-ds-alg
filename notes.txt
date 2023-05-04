@@ -107,5 +107,21 @@ JS DataTypes:
 - delete = O(n) - constant time 
 
 - smallest footprint of any data structure 
-- 
+
+
+67. Static v. Dynamic Arrays:
+- Static: array fixed in size 
+- arrays allocated in adjacent blocks of memory 
+- Dynamic: allows us to copy and store in new location 
+
+
+69. Classes in JavaScript
+- Reference type: non-primitive type
+--- Objects
+- Context: where we are in the object 
+- scope created with curly brackets
+- this => what is the object environment right now 
+
+
+
 
