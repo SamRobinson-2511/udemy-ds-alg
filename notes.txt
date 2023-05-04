@@ -123,5 +123,56 @@ JS DataTypes:
 - this => what is the object environment right now 
 
 
+Arrays: 
+- Fast lookups
+- Fast push / pop
+- Ordered 
+
+- Slow inserts 
+- Slow deletes 
+- Fixed size if using static array 
+
+Hash tables: 
+- Objects in JS are hash tables 
+- One of a common interview question
+
+Key: used as index where to find value in memory 
+- hash function places key with value in memory
+
+Hash function: function that generates a value of fixed length for each input 
+- md5: 
+- one way
+- idempotent: a function given an input is outputting the same 
+=> fast data access 
+=> converts to index / address space 
+=> hash function slows things down 
+=> implemented with optimum hashing function 
+- sha-256: used in cryptography 
+key -> hash function -> memory address 
+- assume O(1)
+
+
+80. Hash Collisions: 
+-> insert : O(1)
+-> lookup : O(1)
+-> delete : O(1)
+-> search : O(1)
+
+Problems: 
+- collision: can't be 
+- buckets
+- overflow:
+
+
+Key and Value can be any type of data structure 
+- ES6: 
+-> Map
+--> allows to save any data type as a key 
+--> maintains insertion order
+-> Sets
+--> saves keys not values 
+
+
+
 
 

@@ -374,6 +374,46 @@ const object4 = {
 // const wizard1 = new Wizard('Shelly', 'Healer')
 // const wizard2 = new Wizard('Shawn', 'Dark Magic')
 
+let user = {
+    age: 54, 
+    name: "Kylie", 
+    magic: true, 
+    scream: function(){
+        console.log('ahhhhh')
+    }
+}
+//all placed in memory
+console.log(user.age);//O(1)
+user.spell = 'abracadabra';//O(1)
+console.log(user.spell)//O(1)
+console.log(user.scream);//O(1)
+
+
+//implement a hash table 
+
+class HashTable{
+    constructor(size){
+        this.data = new Array(size);
+        [['grapes', 10000]]
+    }
+    _hash(key){//private property
+        let hash = 0;
+        for (let i = 0; i < key.length; i++){
+            hash = (hash + key.charCodeAt(i) * 1) %//charCode
+            this.data.length;
+        }
+        return hash;
+    }
+}
+
+const myHashTable = new HashTable(50);
+myHashTable.set('grapes', 10000);
+myHashTable.get('grapes');
+
+
+
+
+
 
 
 
