@@ -427,13 +427,25 @@ class HashTable{
         } //O(1)
         return undefined;
     }
+    keys(){//iterate through all keys
+        const keysArray = [];
+        for(let i = 0; i < this.data.length; i++){
+            if(this.data[i]){
+                console.log(this.data[i][0])
+                keysArray.push(this.data[i][0])
+            }
+        }
+        return keysArray;
+    }
 }
 
 const myHashTable = new HashTable(50);
 // myHashTable._hash('grapes');
 myHashTable.set('grapes', 10000)
 myHashTable.set('apples', 54);
-myHashTable.get('grapes');
+myHashTable.set('oranges', 2);
+// myHashTable.get('grapes');
+myHashTable.keys();
 
 
 
