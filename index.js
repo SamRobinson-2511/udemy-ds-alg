@@ -79,9 +79,9 @@ const everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', '
 
 function findNemo(array){
     for (let i = 0; i < array.length; i++){
-        console.log('running');
+        // console.log('running');
         if (array[i] === 'nemo'){
-            console.log('found NEMO');
+            // console.log('found NEMO');
             break; //always look for worst case 
         }
     }
@@ -112,7 +112,7 @@ const boxes = ['a','b','c','d','e'];
 function logAllPairsOfArray(array){
     for (let i = 0; i < array.length; i++){
         for (let j = 0; j <  array.length; j++){
-            console.log(array[i], array[j] );
+            // console.log(array[i], array[j] );
         }
     }
 }
@@ -124,14 +124,14 @@ logAllPairsOfArray(boxes);
 
 // 4. Drop non - dominants 
 function printAllNumbersThenAllPairSums(numbers){
-    console.log('these are the numbers');
+    // console.log('these are the numbers');
     numbers.forEach(function(number){
-        console.log('number');
+        // console.log('number');
     });
-    console.log('and these are their sums: ');
+    // console.log('and these are their sums: ');
     numbers.forEach(function(firstNumber){
         numbers.forEach(function(secondNumber){
-            console.log(firstNumber + secondNumber)
+            // console.log(firstNumber + secondNumber)
         })
     })
 }
@@ -143,7 +143,7 @@ printAllNumbersThenAllPairSums([1,2,3,4,5]) //O(n^2)
 
 function boooo(n){
     for (let i = 0; i < n.length; i++){
-        console.log('booooo')
+        // console.log('booooo')
     }
 }
 
@@ -154,7 +154,7 @@ function arrayOfHiNTimes(n){
     for (let i = 0; i < n; i++){
         hiArray[i] = 'hi';
     }
-    console.log(hiArray);
+    // console.log(hiArray);
 }
 
 arrayOfHiNTimes(6) //O(n) because we're creating a data structure 
@@ -163,8 +163,8 @@ arrayOfHiNTimes(6) //O(n) because we're creating a data structure
 // find first, find nth tweet
 
 const array = ['hi', 'my', 'teddy'];
-console.log(array[0]); //O(1)
-console.log(array[array.length-1]); //O(1)
+// console.log(array[0]); //O(1)
+// console.log(array[array.length-1]); //O(1)
 
 const array2 = [{
     tweet: 'hi', 
@@ -177,14 +177,14 @@ const array2 = [{
     date: 2018
 }]; //O(n^2) time because they're nested loops
 
-console.log('heareawe;dlkajsdfasdf'.length) //simple property of object in JS, O(1)
+// console.log('heareawe;dlkajsdfasdf'.length) //simple property of object in JS, O(1)
 
 
 //50. JavaScript loops
 const findNemo2 = array => {
     array.forEach(fish => {
         if(fish === 'nemo'){
-            console.log('Found Nemo!')
+            // console.log('Found Nemo!')
         }
     })
 }
@@ -271,7 +271,7 @@ function containsCommonItem2(array1, array2){
 }
 
 
-console.log(containsCommonItem2(arr1, arr3));
+// console.log(containsCommonItem2(arr1, arr3));
 
 ////////////GOOGLE INTERVIEW
 //NAIVE
@@ -286,7 +286,7 @@ function hasPairWithSum(arr, sum){
     return false;
 }
 
-console.log(hasPairWithSum([0,2,5], 7))
+// console.log(hasPairWithSum([0,2,5], 7))
 
 //BETTER
 function hasPairWithSum2(arr, sum){
@@ -300,7 +300,7 @@ function hasPairWithSum2(arr, sum){
     }
     return false;
 }
-console.log(hasPairWithSum2([0,2,5], 7));
+// console.log(hasPairWithSum2([0,2,5], 7));
 
 //DATA STUCTURES AND ALGORITHMS
 
@@ -308,23 +308,23 @@ const strings = ['a', 'b', 'c', 'd'];
 // to store 4 items on a 32 bit system
 // 4 * 4 uses 16 bytes of storage
 //stored in sequential order in ram 
-console.log(strings[2])
+// console.log(strings[2])
 
 //push: add something to end of array 
 
 strings.push('e');
-console.log(strings);//O(1)
+// console.log(strings);//O(1)
 //pop: removes 
 const x = strings.pop(); //O(1)
-console.log(x)
+// console.log(x)
 
 //unshift: add to front of array
 strings.unshift('x');//O(n) to reassign indices 
-console.log(strings)
+// console.log(strings)
 
 //splice: insertion/deletion
 strings.splice(2, 0, 'alien');//O(n/2), simplified to O(n)
-console.log(strings)
+// console.log(strings)
 
 //C++ 
 // int a[20];
@@ -383,32 +383,69 @@ let user = {
     }
 }
 //all placed in memory
-console.log(user.age);//O(1)
+// console.log(user.age);//O(1)
 user.spell = 'abracadabra';//O(1)
-console.log(user.spell)//O(1)
-console.log(user.scream);//O(1)
+// console.log(user.spell)//O(1)
+// console.log(user.scream);//O(1)
 
 
 //implement a hash table 
-
 class HashTable{
     constructor(size){
         this.data = new Array(size);
-        [['grapes', 10000]]
     }
-    _hash(key){//private property
+    _hash(key) {
         let hash = 0;
         for (let i = 0; i < key.length; i++){
-            hash = (hash + key.charCodeAt(i) * 1) %//charCode
+            hash = (hash + key.charCodeAt(i) * i) % 
             this.data.length;
+            // console.log(hash);
         }
         return hash;
+    }
+    set(key, value){
+        let address = this._hash(key); //store data at this address space
+        if (!this.data[address]){
+            this.data[address] = [];
+            // this.data[address].push(key, value)
+            // console.log(this.data);
+        }
+        this.data[address].push(key, value);
+        return this.data;
+        console.log(this.data)
+    }
+    get(key){
+        let address = this._hash(key);
+        const currentBucket = this.data[address];
+        console.log(currentBucket)
+        if(currentBucket){
+            for(let i = 0; i < currentBucket.length; i++){
+                if(currentBucket[i][0] === key){
+                    return currentBucket[i][0];
+                }
+            }
+        } //O(1)
+        return undefined;
     }
 }
 
 const myHashTable = new HashTable(50);
-myHashTable.set('grapes', 10000);
+// myHashTable._hash('grapes');
+myHashTable.set('grapes', 10000)
+myHashTable.set('apples', 54);
 myHashTable.get('grapes');
+
+
+
+
+
+
+
+
+
+//84: Keys
+
+
 
 
 
