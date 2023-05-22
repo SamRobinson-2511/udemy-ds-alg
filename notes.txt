@@ -172,7 +172,22 @@ Key and Value can be any type of data structure
 -> Sets
 --> saves keys not values 
 
+86. 
+
+Arrays: 
+- search = O(n)
+- lookup = O(1)
+- push* = O(1)
+- insert = O(n)
+- delete = O(n)
 
 
+Hash Tables: let us use flexible keys 
+- search = O(1) //use in databases
+- insert = O(1)
+- lookup = O(1)
+- delete = O(1)
+
+87. 
 
 

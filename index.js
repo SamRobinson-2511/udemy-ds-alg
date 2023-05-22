@@ -431,7 +431,7 @@ class HashTable{
         const keysArray = [];
         for(let i = 0; i < this.data.length; i++){
             if(this.data[i]){
-                console.log(this.data[i][0])
+                // console.log(this.data[i][0])
                 keysArray.push(this.data[i][0])
             }
         }
@@ -446,6 +446,50 @@ myHashTable.set('apples', 54);
 myHashTable.set('oranges', 2);
 // myHashTable.get('grapes');
 myHashTable.keys();
+
+
+//Google Question: First recurring characters 
+// Given an array = [2,5,1,2,3,5,1,2,4]
+// it should return 2
+
+// Given an array = [2, 1, 1, 2, 3, 5, 1, 2, 4]
+// it should return 1
+
+//Given an array = [2, 3, 4, 5]
+//It should return undefined 
+
+//naive approach 
+
+function firstRecurringCharacter(input){
+    for (let i = 0; i < input.length; i++){
+        for (let j = i+1; j < input.length; j++){
+            if (input[i] === input[j]){
+                console.log(input[i])
+                return input[i];
+            }
+        }
+    }
+    return undefined;
+}
+
+firstRecurringCharacter([1,5,1,2,3,5,1,2,4]) //nested loop = O(n^2)
+
+
+//create hash table 
+function firstRecurringCharacter2(input){
+    let map = {};
+    for(let i = 0; i < input.length; i++){
+        if(map[input[i]] !== undefined){
+            return input[i];
+        } else {
+            map[input[i]] = i
+        }
+    }
+    return undefined;
+}
+
+firstRecurringCharacter2([2,5,1,2,3,5,1,2,4])
+
 
 
 
